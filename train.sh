@@ -1,0 +1,17 @@
+chemprop train \
+--data-path data/folds/train_smiles_fold_0.csv \
+--task-type regression \
+--target-columns rejection \
+--smiles-columns full_smiles \
+--output-dir dummy_model \
+--epochs 2 \
+--warmup-epochs 1 \
+--ensemble-size 3 \
+--split-type random \
+--metrics rmse r2 \
+--aggregation mean \
+--batch-size 50 \
+--loss-function mse \
+--ffn-num-layers 2 \
+--multi-hot-atom-featurizer-mode V1 \
+--ignore-stereo
